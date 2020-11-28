@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DecibelsActivity"
+    android:background="@drawable/background">
+
+
+    <TextView
+        android:id="@+id/decibelsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand"
+        android:text="@string/decibels"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165" />
+
+    <TextView
+        android:id="@+id/decibelsNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rob"
+        android:text="34+3"
+        android:textColor="@color/black"
+        android:textSize="82dp"
+        app:layout_constraintEnd_toEndOf="@+id/decibelsTextView"
+        app:layout_constraintStart_toStartOf="@+id/decibelsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/decibelsTextView" />
+
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/circle3"
+        android:drawableStart="@drawable/ic_plus"
+        android:elevation="20dp"
+        android:paddingLeft="26dp"
+        android:stateListAnimator="@null"
+        app:layout_constraintEnd_toEndOf="@+id/decibelsNumberTextView"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/decibelsNumberTextView"
+        app:layout_constraintTop_toBottomOf="@+id/decibelsNumberTextView" />
+
+    <Button
+        android:id="@+id/minusButton"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/circle3"
+        android:drawableStart="@drawable/ic_minus"
+        android:elevation="20dp"
+        android:paddingLeft="26dp"
+        android:stateListAnimator="@null"
+        app:layout_constraintEnd_toEndOf="@+id/plusButton"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/plusButton"
+        app:layout_constraintTop_toBottomOf="@+id/plusButton" />
+
+    <TextView
+        android:id="@+id/helpTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="144dp"
+        android:fontFamily="@font/quicksand"
+        android:text="@string/help"
+        android:textColor="#757575"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/minusButton"
+        app:layout_constraintStart_toStartOf="@+id/minusButton"
+        app:layout_constraintTop_toBottomOf="@+id/minusButton"
+        app:layout_constraintVertical_bias="0.788" />
+</androidx.constraintlayout.widget.ConstraintLayout>

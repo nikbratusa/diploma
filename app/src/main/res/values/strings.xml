@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">DiplomaApp</string>
+    <string name="login">Log in</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="login_google">Log in with Google</string>
+    <string name="login_facebook">Log in with Facebook</string>
+    <string name="new_account">Create new account</string>
+    <string name="forget_password">Forgot your password?</string>
+    <string name="decibels">decibels:</string>
+    <string name="help">Help</string>
+    <string name="exposure_time">Safe exposure time</string>
+    <string name="earplugs">Do you own earplugs?</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="on">on</string>
+    <string name="off">off</string>
+    <string name="advice">Smart advice</string>
+    <string name="calibrate">Calibrate microphone</string>
+    <string name="background">Background monitoring</string>
 </resources>
