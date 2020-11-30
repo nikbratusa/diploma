@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "110495810991",
+    "firebase_url": "https://diplomaapp-8f058.firebaseio.com",
+    "project_id": "diplomaapp-8f058",
+    "storage_bucket": "diplomaapp-8f058.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110495810991:android:57e1aaf02e9f40b3b3db5a",
+        "android_client_info": {
+          "package_name": "com.example.diplomaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110495810991-pd17tk79b0cr9ru7rpne7kf687ik3bfk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzegtCws3g6XVrBOt-K3JY7Pt6MhQB6Uc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110495810991-pd17tk79b0cr9ru7rpne7kf687ik3bfk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

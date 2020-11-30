@@ -1,11 +1,16 @@
 <resources>
     <string name="app_name">DiplomaApp</string>
     <string name="login">Log in</string>
+    <string name="sign_up">Sign up</string>
     <string name="email">email</string>
     <string name="password">password</string>
+    <string name="password_confirm">confirm password</string>
     <string name="login_google">Log in with Google</string>
     <string name="login_facebook">Log in with Facebook</string>
+    <string name="signup_google">Sign up with Google</string>
+    <string name="signup_facebook">Sign up with Facebook</string>
     <string name="new_account">Create new account</string>
+    <string name="have_account">Already have an account?</string>
     <string name="forget_password">Forgot your password?</string>
     <string name="decibels">decibels:</string>
     <string name="help">Help</string>

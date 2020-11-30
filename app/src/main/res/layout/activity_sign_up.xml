@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".LoginActivity">
+    tools:context=".SignUpActivity"
+    android:background="@drawable/background">
 
     <TextView
-        android:id="@+id/loginTextView"
+        android:id="@+id/signUpTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/quicksand"
-        android:text="@string/login"
+        android:text="@string/sign_up"
         android:textColor="@color/black"
         android:textSize="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,7 +38,7 @@
         android:elevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/signUpTextView" />
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -57,26 +57,43 @@
         app:layout_constraintStart_toStartOf="@+id/emailEditText"
         app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
 
-    <Button
-        android:id="@+id/loginButton"
+    <EditText
+        android:id="@+id/confirmPasswordEditText"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/quicksand"
-        android:text="@string/login"
-        android:background="@drawable/btn_bg"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="20sp"
+        android:background="@drawable/input_bg"
+        android:textColorHint="#B3B3B3"
         android:elevation="20dp"
-        android:onClick="openMain"
-        android:stateListAnimator="@null"
+        android:ems="10"
+        android:fontFamily="@font/quicksand"
+        android:hint="@string/password_confirm"
+        android:inputType="textPassword"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
         app:layout_constraintStart_toStartOf="@+id/passwordEditText"
         app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
 
     <Button
-        android:id="@+id/loginGoogleButton"
+        android:id="@+id/signUpButton"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/quicksand"
+        android:text="@string/sign_up"
+        android:background="@drawable/btn_bg"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:elevation="20dp"
+        android:stateListAnimator="@null"
+        android:onClick="openMain"
+        app:layout_constraintEnd_toEndOf="@+id/confirmPasswordEditText"
+        app:layout_constraintStart_toStartOf="@+id/confirmPasswordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPasswordEditText" />
+
+    <Button
+        android:id="@+id/signUpGoogleButton"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginTop="48dp"
@@ -85,16 +102,16 @@
         android:elevation="20dp"
         android:fontFamily="@font/quicksand"
         android:stateListAnimator="@null"
-        android:text="@string/login_google"
+        android:text="@string/signup_google"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/loginButton"
-        app:layout_constraintStart_toStartOf="@+id/loginButton"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
+        app:layout_constraintEnd_toEndOf="@+id/signUpButton"
+        app:layout_constraintStart_toStartOf="@+id/signUpButton"
+        app:layout_constraintTop_toBottomOf="@+id/signUpButton" />
 
     <Button
-        android:id="@+id/loginFacebookButton"
+        android:id="@+id/signUpFacebookButton"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginTop="16dp"
@@ -103,13 +120,13 @@
         android:elevation="20dp"
         android:fontFamily="@font/quicksand"
         android:stateListAnimator="@null"
-        android:text="@string/login_facebook"
+        android:text="@string/signup_facebook"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/loginGoogleButton"
-        app:layout_constraintStart_toStartOf="@+id/loginGoogleButton"
-        app:layout_constraintTop_toBottomOf="@+id/loginGoogleButton" />
+        app:layout_constraintEnd_toEndOf="@+id/signUpGoogleButton"
+        app:layout_constraintStart_toStartOf="@+id/signUpGoogleButton"
+        app:layout_constraintTop_toBottomOf="@+id/signUpGoogleButton" />
 
     <TextView
         android:id="@+id/newAccountTextView"
@@ -118,13 +135,12 @@
         android:layout_marginTop="32dp"
         android:clickable="true"
         android:fontFamily="@font/quicksand"
-        android:text="@string/new_account"
-        android:onClick="openSignUp"
+        android:text="@string/have_account"
         android:textColor="#757575"
         android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/loginFacebookButton"
-        app:layout_constraintStart_toStartOf="@+id/loginFacebookButton"
-        app:layout_constraintTop_toBottomOf="@+id/loginFacebookButton" />
+        app:layout_constraintEnd_toEndOf="@+id/signUpFacebookButton"
+        app:layout_constraintStart_toStartOf="@+id/signUpFacebookButton"
+        app:layout_constraintTop_toBottomOf="@+id/signUpFacebookButton" />
 
     <TextView
         android:id="@+id/forgetPasswordTextView"
@@ -133,14 +149,16 @@
         android:layout_marginTop="16dp"
         android:clickable="true"
         android:fontFamily="@font/quicksand"
-        android:text="@string/forget_password"
+        android:text="@string/login"
         android:textColor="#757575"
         android:textSize="16dp"
+        android:onClick="openLogin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/newAccountTextView"
         app:layout_constraintStart_toStartOf="@+id/newAccountTextView"
         app:layout_constraintTop_toBottomOf="@+id/newAccountTextView"
         app:layout_constraintVertical_bias="0.0" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
