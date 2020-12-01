@@ -69,7 +69,6 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:elevation="20dp"
-        android:onClick="openMain"
         android:stateListAnimator="@null"
         app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
         app:layout_constraintStart_toStartOf="@+id/passwordEditText"

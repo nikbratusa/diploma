@@ -29,13 +29,9 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        findUIElements();
         mAuth = FirebaseAuth.getInstance();
         mLoadingBar = new ProgressDialog(SignUpActivity.this);
-
-        etEmail = findViewById(R.id.emailEditText);
-        etPassword = findViewById(R.id.passwordEditText);
-        etConfirmPassword = findViewById(R.id.confirmPasswordEditText);
-        btnSignUp = findViewById(R.id.signUpButton);
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,11 +39,6 @@ public class SignUpActivity extends AppCompatActivity {
                 checkInputs();
             }
         });
-    }
-
-    public void openMain(View view) {
-        Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
-        startActivity(intent);
     }
 
     public void openLogin(View view) {
@@ -97,6 +88,13 @@ public class SignUpActivity extends AppCompatActivity {
     private void showError(EditText input, String s){
         input.setError(s);
         input.requestFocus();
+    }
+
+    private void findUIElements(){
+        etEmail = findViewById(R.id.emailEditText);
+        etPassword = findViewById(R.id.passwordEditText);
+        etConfirmPassword = findViewById(R.id.confirmPasswordEditText);
+        btnSignUp = findViewById(R.id.signUpButton);
     }
 
 

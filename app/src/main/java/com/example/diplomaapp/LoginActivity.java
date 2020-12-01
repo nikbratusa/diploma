@@ -27,13 +27,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        findUIElements();
         mAuth = FirebaseAuth.getInstance();
-
         mLoadingBar = new ProgressDialog(LoginActivity.this);
-
-        etEmail = findViewById(R.id.emailEditText);
-        etPassword = findViewById(R.id.passwordEditText);
-        btnLogin = findViewById(R.id.loginButton);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +80,12 @@ public class LoginActivity extends AppCompatActivity {
     private void showError(EditText input, String s){
         input.setError(s);
         input.requestFocus();
+    }
+
+    private void findUIElements(){
+        etEmail = findViewById(R.id.emailEditText);
+        etPassword = findViewById(R.id.passwordEditText);
+        btnLogin = findViewById(R.id.loginButton);
     }
 
 }
