@@ -15,7 +15,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class UserActivity extends AppCompatActivity {
 
     private Button btnEarPlugs, btnSmartAdvice, btnBackground, btnCalibrate;
-    private TextView tvEmail;
+    private TextView tvEmail,tvLogOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +81,16 @@ public class UserActivity extends AppCompatActivity {
             }
         });
 
+        tvLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(UserActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 
@@ -98,6 +108,7 @@ public class UserActivity extends AppCompatActivity {
         btnSmartAdvice = findViewById(R.id.adviceButton);
         btnSmartAdvice.setTag(1);
         tvEmail = findViewById(R.id.emailTextView);
+        tvLogOut = findViewById(R.id.logOutTextView);
     }
 
     private void checkUserAndSetEmail(){

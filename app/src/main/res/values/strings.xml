@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">DiplomaApp</string>
     <string name="login">Log in</string>
+    <string name="logout">Log out</string>
     <string name="sign_up">Sign up</string>
     <string name="email">email</string>
     <string name="password">password</string>

@@ -113,8 +113,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/circle2"
-            android:onClick="openDecibels"
             android:drawableStart="@drawable/ic_plusminus"
+            android:onClick="openDecibels"
             android:paddingLeft="30dp" />
     </LinearLayout>
 
@@ -187,6 +187,20 @@
             android:textColor="@color/black"
             android:textSize="16dp" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/logOutTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="@string/logout"
+        android:clickable="true"
+        android:fontFamily="@font/quicksand"
+        android:textColor="#757575"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/calibrateLayout"
+        app:layout_constraintStart_toStartOf="@+id/calibrateLayout"
+        app:layout_constraintTop_toBottomOf="@+id/calibrateLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
